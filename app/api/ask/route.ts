@@ -1,5 +1,3 @@
-// api helper function, called from backend 
-
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
