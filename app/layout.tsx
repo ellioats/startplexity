@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { UserInputProvider } from '@/context/InputUserContext'
 
 export const metadata: Metadata = {
   title: 'Startplexity',
@@ -12,7 +13,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <UserInputProvider>
+          {children}
+        </UserInputProvider>
+      </body>
     </html>
   )
 }
