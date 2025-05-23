@@ -1,18 +1,13 @@
 import { createContext, useContext, useState, ReactNode } from "react";
+import { UserInput } from "@/types/UserInputType";
 
-// move declaration to types folder?
-type UserInput = {
-  initialQuery: string;
-  answerOne: string;
-  answerTwo: string;
-  answerThree: string;
-}
-
+// creates the context type
 const UserInputContext = createContext<{
   userInput: UserInput;
   setUserInput: (data: UserInput) => void;
 } | null>(null);
 
+// creates the provider with the context + returns the jsx
 export const UserInputProvider = ({ children }: { children: ReactNode }) => {
   const [userInput, setUserInput] = useState<UserInput>({
     initialQuery: "",
@@ -20,8 +15,6 @@ export const UserInputProvider = ({ children }: { children: ReactNode }) => {
     answerTwo: "",
     answerThree: ""
   });
-
-
 
   return (
     <UserInputContext.Provider value={{ userInput, setUserInput }} >
