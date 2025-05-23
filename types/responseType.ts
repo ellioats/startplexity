@@ -1,3 +1,4 @@
+// do not use. still wip
 export interface responseType {
 
   initialQuery: string,
@@ -10,3 +11,5 @@ export interface responseType {
   responseTwo: string,
   responseThree: string
 }
+
+
