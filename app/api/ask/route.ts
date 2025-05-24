@@ -6,7 +6,7 @@ export async function POST(req: NextRequest) {
 
   try {
 
-    const res = await fetch('pplx api link', {
+    const res = await fetch("https://api.perplexity.ai/sonar", {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${process.env.PERPLEXITY_API_KEY}`,
@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         model: 'sonar-small-chat',
         messages: [
-          { role: 'system', content: 'starter query' },
+          { role: 'system', content: 'you are a cat, you can only say meow.' },
           { role: 'user', content: query }
         ],
       }),
