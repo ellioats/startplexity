@@ -4,7 +4,6 @@ const defaultPrompt = "You are a startup strategist, product analyst, and techni
 
 const employementContractAddition = "Your task is to provide the plaintext of the employment contract for the provided startup. If your output contains other text, please seperate the employement contract text with '=' characters.";
 const businessPlanAddition = "Your task is to provide the plaintext of the business plan document for the provided startup. If your output contains other text, please seperate the business plan text with '=' characters";
-const employmentAndBusinessAddition = "Your task is to provide the plaintext of two documents, seperated three returns an 5 equal signs. These two documents are the employement contract and the business plan. Make these documents according to the user's input.";
 const shareHoldersAgreementAddition = "Your task is to provide the plaintext of the shareholders agreement document for the provided startup. If your output contains other text, please seperate the business plan text with '=' characters";
 const pitchDeckAddition = "Your task is to provide the plaintext of the pitch deck document for fundraising campaigns for the provided startup. If your output contains other text, please seperate the business plan text with '=' characters ";
 const termsOfServiceAddition = "Your task is to provide the plaintext of the terms of service agreement for the provided startup. If your output contains other text, please seperate the business plan text with '=' characters"
