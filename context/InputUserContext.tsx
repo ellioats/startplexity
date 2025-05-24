@@ -7,6 +7,8 @@ import { UserInput } from "@/types/UserInputType";
 const UserInputContext = createContext<{
   userInput: UserInput;
   setUserInput: (data: UserInput) => void;
+  apiResponse: string;
+  setApiResponse: (data: string) => void;
 } | null>(null);
 
 // creates the provider with the context + returns the jsx
@@ -18,8 +20,10 @@ export const UserInputProvider = ({ children }: { children: ReactNode }) => {
     answerThree: ""
   });
 
+  const [apiResponse, setApiResponse] = useState("");
+
   return (
-    <UserInputContext.Provider value={{ userInput, setUserInput }} >
+    <UserInputContext.Provider value={{ userInput, setUserInput, apiResponse, setApiResponse }} >
       {children}
     </UserInputContext.Provider >
 
